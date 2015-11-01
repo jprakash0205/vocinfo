@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}VOC Info: Index{% endblock %}
+{% block navbar %}
+<div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">VOC Info</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="{{url_for('index',_external=True)}}">Home</a></li>
+        <li><a href="{{url_for('aboutus',_external=True)}}">Getting Started</a></li>
+        <li class="active"><a href="{{url_for('contactus',_external=True)}}">Community</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+{% endblock %}
+{%block page_header %}{% endblock %}
+{% block page_content %}
+<div class="page=header">
+    <h1>Registration</h1>
+</div>
+<div class="col-md-4">
+    {{ wtf.quick_form(form) }}
+</div>
+{% endblock %}

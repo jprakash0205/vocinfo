@@ -1,0 +1,5 @@
+---
+applications:
+- name: vocinfo
+  memory: 512M
+  buildpack: https://github.com/cloudfoundry/python-buildpack

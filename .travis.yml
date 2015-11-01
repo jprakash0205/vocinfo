@@ -1,0 +1,20 @@
+language: python
+
+env:
+ - PORT=5030
+install:
+  - pip install -U pip
+  - pip install -r requirements.txt
+
+# command to run tests
+#script: python tests.py
+script: echo "OK"
+
+deploy:
+   edge: true
+   provider: cloudfoundry
+   username: vnirmalkumarece@gmail.com
+   password: Karuvadu123
+   api: https://api.run.pivotal.io
+   organization: voice
+   space: development

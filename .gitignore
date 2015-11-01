@@ -1,0 +1,8 @@
+*.pyc
+venv
+app
+*.db
+config.py
+reports.py
+*.txt
+tmp
